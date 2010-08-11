@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt-get install curl gzip tar 
+apt-get install -y curl gzip tar 
 
 cd files
 
