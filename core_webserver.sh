@@ -8,6 +8,7 @@ make
 make install
 
 #Algumas libs para Apache e PHP
+apt-get install -y apache2-mpm-worker
 apt-get install -y libapache2-mod-ruby libapache-ruby1.8 apache2-utils php5 apache2-prefork-dev apache2-common
 apt-get install -y libapache2-mod-vhost-hash-alias
 
