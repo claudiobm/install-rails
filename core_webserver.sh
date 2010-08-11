@@ -2,9 +2,7 @@
 
 #Apache
 cd /opt/RoR
-wget ftp://ftp.ru/pub/sunfreeware/SOURCES/httpd-2.2.9.tar.gz
-tar xvfz httpd-2.2.9.tar.gz
-cd httpd-2.2*
+cd httpd
 ./configure
 make
 make install
