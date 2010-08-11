@@ -1,0 +1,5 @@
+1.0
+Separado o core ruby do webserver
+
+1.0.1
+Esta fazendo downloads e colocando na pasta files
