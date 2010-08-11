@@ -1,5 +1,7 @@
 #!/bin/sh
 
+apt-get install curl gzip tar 
+
 cd files
 
 #Core do ruby
