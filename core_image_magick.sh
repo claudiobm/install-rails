@@ -1,11 +1,11 @@
 #!/bin/sh
 path_root= pwd
 
-$path_root
+"$path_root"
 cd files
 
 #Imagemagick packages
-cd $path_root
+cd "$path_root"
 cd files
 cd freetype
 ./configure --prefix=/usr/local
@@ -15,7 +15,7 @@ cd /usr/local/src
 
 apt-get install -y libpng*
 
-cd $path_root
+cd "$path_root"
 cd files
 cd jpegsrc
 ln -s `which glibtool` ./libtool
@@ -25,7 +25,7 @@ make
 sudo make install
 cd /usr/local/src
 
-cd $path_root
+cd "$path_root"
 cd files
 cd tiff
 ./configure --prefix=/usr/local
@@ -35,7 +35,7 @@ cd /usr/local/src
 
 apt-get install -y libwmf*
 
-cd $path_root
+cd "$path_root"
 cd files
 cd lcms
 make clean
@@ -44,7 +44,7 @@ make
 sudo make install
 cd /usr/local/src
 
-cd $path_root
+cd "$path_root"
 cd files
 cd ghostscript
 ./configure  --prefix=/usr/local
@@ -52,13 +52,13 @@ make
 sudo make install
 cd /usr/local/src
 
-cd $path_root
+cd "$path_root"
 cd files
 tar zxvf ghostscript-fonts.tar.gz
 sudo mv fonts /usr/local/share/ghostscript
 
 # Image Magick
-cd $path_root
+cd "$path_root"
 cd files
 cd `ls | grep ImageMagick-`
 export CPPFLAGS=-I/usr/local/include
