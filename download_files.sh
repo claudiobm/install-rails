@@ -1,7 +1,8 @@
 #!/bin/sh
-
+path_root= pwd
 apt-get install -y curl gzip tar 
 
+cd $path_root
 cd files
 
 #Core do ruby

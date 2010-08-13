@@ -1,7 +1,12 @@
 #!/bin/sh
+path_root= pwd
+
+$path_root
+cd files
 
 #Imagemagick packages
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd freetype
 ./configure --prefix=/usr/local
 make
@@ -10,7 +15,8 @@ cd /usr/local/src
 
 apt-get install -y libpng*
 
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd jpegsrc
 ln -s `which glibtool` ./libtool
 # export MACOSX_DEPLOYMENT_TARGET=10.6
@@ -19,7 +25,8 @@ make
 sudo make install
 cd /usr/local/src
 
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd tiff
 ./configure --prefix=/usr/local
 make
@@ -28,7 +35,8 @@ cd /usr/local/src
 
 apt-get install -y libwmf*
 
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd lcms
 make clean
 ./configure
@@ -36,19 +44,22 @@ make
 sudo make install
 cd /usr/local/src
 
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd ghostscript
 ./configure  --prefix=/usr/local
 make
 sudo make install
 cd /usr/local/src
 
-cd /opt/RoR/files
+cd $path_root
+cd files
 tar zxvf ghostscript-fonts.tar.gz
 sudo mv fonts /usr/local/share/ghostscript
 
 # Image Magick
-cd /opt/RoR/files
+cd $path_root
+cd files
 cd `ls | grep ImageMagick-`
 export CPPFLAGS=-I/usr/local/include
 export LDFLAGS=-L/usr/local/lib
