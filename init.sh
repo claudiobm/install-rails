@@ -1,4 +1,6 @@
 #!/bin/sh
+mkdir "/opt/RoR"
+mkdir "/opt/files"
 
 sh download_files.sh
 sh core_setup_ruby_rails.sh

@@ -1,5 +1,7 @@
 #!/bin/sh
-path_root= pwd
+
+path_root= "/opt/RoR"
+
 apt-get install -y curl gzip tar 
 
 
