@@ -1,6 +1,6 @@
 #!/bin/sh
 
-path_root= "/opt/RoR"
+path_root='/opt/RoR';
 
 apt-get install -y curl gzip tar 
 
@@ -23,8 +23,8 @@ mv zlib-1.2.5 zlib
 echo "Descompactado zlib"
 
 #Ruby gems
-curl https://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz > rubygems.tgz
-tar zxvf rubygems.tgz
+wget https://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz --no-check-certificate
+tar zxvf rubygems-1.3.7.tgz
 mv rubygems-1.3.7 rubygems
 
 echo "Descompactado rubygems"
@@ -37,8 +37,8 @@ mv ruby-zlib-0.6.0 ruby-zlib
 echo "Descompactado ruby-zlib"
 
 #Ruby enterprise
-curl http://rubyforge.org/frs/download.php/71096/ruby-enterprise-1.8.7-2010.02.tar.gz > ruby-enterprise.tar.gz
-tar zxvf ruby-enterprise.tar.gz
+wget http://rubyforge.org/frs/download.php/71096/ruby-enterprise-1.8.7-2010.02.tar.gz
+tar zxvf ruby-enterprise-1.8.7-2010.02.tar.gz
 mv ruby-enterprise-1.8.7-2010.02 ruby-enterprise
 
 echo "Descompactado ruby-enterprise"
@@ -65,27 +65,26 @@ mv tiff-3.9.1 tiff
 echo "Descompactado tiff"
 
 
-curl http://www.littlecms.com/lcms-1.17.tar.gz > lcms.tar.gz
-tar zxvf lcms.tar.gz
-mv lcms-1.17 lcms
+wget http://downloads.sourceforge.net/project/lcms/lcms/2.0/lcms2-2.0a.tar.gz?r=&ts=1281997088&mirror=ufpr
+tar zxvf lcms2-2.0a.tar.gz
+mv lcms-2.0 lcms
 
 echo "Descompactado lcms"
 
-curl http://downloads.sourceforge.net/project/ghostscript/GPL%20Ghostscript/8.71/ghostscript-8.71.tar.gz > ghostscript.tar.gz
-tar zxvf ghostscript.tar.gz
+wget http://downloads.sourceforge.net/project/ghostscript/GPL%20Ghostscript/8.71/ghostscript-8.71.tar.gz
+tar zxvf ghostscript-8.71.tar.gz
 mv ghostscript-8.71 ghostscript
 
 echo "Descompactado lcms"
 
 curl ftp://ftp.imagemagick.net/pub/ImageMagick/delegates/ghostscript-fonts-std-8.11.tar.gz > ghostscript-fonts.tar.gz
 tar zxvf ghostscript-fonts.tar.gz
-mv ghostscript-fonts-std-8.11 ghostscript-fonts
 
 echo "Descompactado ghostscript-fonts"
 
-
-curl ftp://ftp.fifi.org/pub/ImageMagick/ImageMagick.tar.gz > ImageMagick.tar.gz
+wget ftp://ftp.fifi.org/pub/ImageMagick/ImageMagick.tar.gz
 tar zxvf ImageMagick.tar.gz
+mv ImageMagick-* image_magick
 
 echo "Descompactado ImageMagick"
 

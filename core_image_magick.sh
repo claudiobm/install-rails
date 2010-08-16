@@ -52,15 +52,16 @@ make
 sudo make install
 cd /usr/local/src
 
+#Ghostscript-font
 cd "$path_root"
 cd files
-tar zxvf ghostscript-fonts.tar.gz
 sudo mv fonts /usr/local/share/ghostscript
 
 # Image Magick
 cd "$path_root"
 cd files
-cd `ls | grep ImageMagick-`
+# cd `ls | grep ImageMagick-`
+cd image_magick
 export CPPFLAGS=-I/usr/local/include
 export LDFLAGS=-L/usr/local/lib
 ./configure --prefix=/usr/local --disable-static --with-modules --without-perl --without-magick-plus-plus --with-quantum-depth=8 --with-gs-font-dir=/usr/local/share/ghostscript/fonts --disable-openmp
